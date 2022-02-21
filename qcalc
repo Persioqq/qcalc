@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+def qcalc():
+    i = 0
+
+    while True:
+        n = input(f"[{i}]> ")
+        i = i + 1
+
+        if not n: continue
+    
+        else: 
+            if n == "exit" or n == "quit": break
+            elif n == "help": 
+                print("All operation in python eval() function. Type exit or quit to exit the program")
+            
+            try: print(eval(n))
+            except (ZeroDivisionError): print("Infinite")
+
+if __name__ == "__main__": qcalc()
